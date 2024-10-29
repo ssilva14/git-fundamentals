@@ -1,0 +1,465 @@
+/* Navbar Styles */
+.navbar {
+    align-items: center;
+    padding: 8px 36px; /* top, left/right */
+}
+
+.navbar-brand {
+    font-family: 'Courier New', monospace; /* Change the font for the logo */
+    font-weight: bold; /* Optional: make it bold */
+    font-size: 1.5rem; /* Optional: adjust font size */
+    color: #ffcc00; /* Desired color */
+}
+
+.navbar-brand:hover {
+    color: #ffffff; /* Change color on hover */
+}
+
+.nav-item {
+    margin-right: 20px; /* Spacing between items */
+}
+
+.nav-link {
+    transition: color 0.3s, background-color 0.3s; /* Smooth transition */
+    padding: 10px 0; /* top/bottom padding */
+}
+
+.nav-link:hover {
+    color: var(--hover-color); /* Change color on hover */
+    background-color: rgba(255, 255, 255, 0.1); /* Background change on hover */
+}
+
+.dropdown-menu {
+    transition: opacity 0.3s; /* Smooth dropdown transition */
+}
+
+.dropdown-item:hover {
+    background-color: #fff8ee; /* Background change on dropdown hover */
+}
+
+/* Body Styles */
+body {
+    padding-top: 40px; /* Adjust based on navbar's height */
+}
+
+/* Article and Section Styles */
+article {
+    padding: 20px;
+    margin-top: 10px; 
+}
+
+section {
+    background: #f9f9f9; /* Background color */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 2em auto; 
+    max-width: 800px; 
+    width: 100%; 
+}
+
+/* Heading Styles */
+h1 {
+    font-weight: bolder; 
+    color: #007f17;
+    margin-bottom: 1em;
+}
+
+h2 {
+    color: #ff7700; /* Bright orange */
+    border-bottom: 2px solid #0055FF; /* Blue underline */
+    padding-bottom: 10px;
+    font-family: 'Fira Code', monospace; 
+    font-size: 24px; 
+    letter-spacing: 0.5px; 
+    line-height: 1.4; 
+}
+
+h3, h4, h5 {
+    margin: 1em 0; /* Space above/below for h3, h4, h5 */
+}
+
+h5 {
+    color: rgb(0, 145, 255);
+}
+
+/* Paragraph Styles */
+p {
+    line-height: 1.5;
+    margin-bottom: 1.5em; 
+    color: #333; /* Dark text for readability */
+}
+
+/* List Styles */
+ul {
+    margin-bottom: 0; 
+}
+
+li {
+    margin-bottom: 15px; /* Space between list items */
+}
+
+.no-bullets {
+    list-style-type: none; /* Hides bullet points */
+    padding: 0; /* Removes padding */
+}
+
+.no-bullets li {
+    margin-bottom: 16px; /* Space between each list item */
+}
+
+.no-bullet {
+    list-style-type: none; /* Hides bullet points */
+    padding: 8px; /* Removes padding */
+    margin: 8px; /* Removes margin */
+}
+
+/* Code Styles */
+code {
+    color: #ff7700; /* Desired color */
+    background-color: #fff8ee; /* Optional: background color */
+    padding: 2px 4px; /* Optional: padding */
+    border-radius: 4px; /* Optional: rounded corners */
+}
+
+/* Custom Heading Styles */
+.custom-heading {
+    padding-bottom: 0.5rem; /* or px, etc. */
+    cursor: pointer; /* Change cursor for interactivity */
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Center items vertically */
+}
+
+/* Fun Box Styles */
+.fun-box {
+    background-color: #e3f2fd8d; /* Light blue background */
+    border: 2px dashed #42a4f5e4; /* Dashed border in a darker blue */
+    padding: 15px;
+    margin: 24px 0; /* Space above and below the box */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    cursor: pointer; /* Change cursor to indicate clickable */
+}
+
+.fun-box h5 {
+    margin: 0; /* Remove default margin for the heading */
+}
+
+.dropdown-content {
+    display: none; /* Initially hide the content */
+    padding-top: 10px; /* Space above the content */
+}
+
+.dropdown-content p {
+    margin: 5px 0; /* Space between paragraphs */
+}
+
+.arrow {
+    font-size: 1em; /* Icon size */
+    margin-left: 12px; /* Increase space between title and arrow */
+    transition: transform 0.3s ease; /* Smooth rotation */
+    display: inline-block; /* Ensure proper alignment */
+}
+
+.fun-box.expanded .dropdown-content {
+    display: block; /* Show content when expanded */
+}
+
+.fun-box.expanded .arrow {
+    transform: rotate(180deg); /* Rotate arrow when expanded */
+}
+
+/* Footer Styles */
+footer {
+    background-color: #202223;
+    padding: 10px;
+    text-align: center;
+    color: white;
+    clear: both;
+    margin-top: 2em; 
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .navbar-nav {
+        margin-left: 0; 
+    }
+}
+
+@media (max-width: 600px) {
+    article {
+        width: 100%;
+        height: auto;
+        margin-left: 0;
+        float: none; 
+    }
+}
+
+/* Horizontal Rule Styles */
+hr {
+    margin: 84px 0 24px; /* Top margin 84px, bottom margin 24px */
+}
+
+/* Highlight Styles */
+.highlight {
+    background-color: #e3f2fd6d; /* Light blue background */
+    color: #42a4f5e4; /* Blue text color */
+    font-weight: bold; /* Bold text */
+    padding: 2px 4px; /* Add some padding for better visibility */
+    border-radius: 4px; /* Slightly rounded corners */
+}
+
+
+        .navbar-brand {
+            font-family: 'Courier New', monospace; /* Change the font for the logo */
+            font-weight: bold; /* Optional: make it bold */
+            font-size: 1.5rem; /* Optional: adjust font size */
+            color: #ffcc00; /* Change this to your desired color */
+        }
+        .navbar-brand:hover {
+            color: #ffffff; /* Change color on hover */
+        }
+
+     .navbar .navbar-brand {
+            font-family: 'Courier New', monospace; /* Change the font for the logo */
+            font-weight: bold; /* Optional: make it bold */
+            font-size: 1.5rem; /* Optional: adjust font size */
+            color: #ffcc00; /* Your desired color */
+        }
+        .navbar .navbar-brand:hover {
+            color: #ffffff; /* Change color on hover */
+        }
+
+
+    .navbar {
+    align-items: center;
+    padding-left: 36px; 
+    padding-right: 36px; 
+    padding-top: 8px;  
+
+
+}
+
+
+body {
+    padding-top: 40px; /* Adjust this value based on your navbar's height */
+}
+
+
+@media (max-width: 768px) {
+    .navbar-nav {
+        margin-left: 0; 
+    }
+}
+
+.nav-item {
+    margin-right: 20px; /* Spacing between items */
+}
+
+.nav-link {
+    transition: color 0.3s, background-color 0.3s; /* Smooth transition */
+    padding-top: 10px; 
+    padding-bottom: 10px; 
+}
+
+.nav-link:hover {
+    color: var(--hover-color); /* Change color on hover */
+    background-color: rgba(255, 255, 255, 0.1); /* Background change on hover */
+}
+
+.dropdown-menu {
+    transition: opacity 0.3s; /* Smooth dropdown transition */
+}
+
+.dropdown-item:hover {
+    background-color: #fff8ee; /* Background change on dropdown hover */
+}
+
+
+
+article {
+            padding: 20px;
+            margin-top: 10px; 
+        }
+        section {
+            background: #fffefd;
+            padding: 3em;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.231);
+            margin: 2em auto; 
+            max-width: 800px; 
+            width: 100%; 
+        }
+        h1 {
+            font-weight: bolder; 
+            color: #007f17;
+            margin-bottom: 1em;
+
+        }
+        h5 {
+            color:rgb(0, 145, 255);
+        }
+        h4 {
+            margin-top: 1.0em;
+            margin-bottom: 1.0em;
+
+        }
+
+        h3 {
+            margin-top: 1.0em;
+            margin-bottom: 1.0em;
+            color:#1f2021fe;
+        }
+        .custom-heading {
+        padding-bottom: 0.5rem; /* or px, etc. */
+        }
+
+
+        .shadow-container {
+            display: flex;
+            flex-direction: column; 
+            align-items: center;
+            margin: 20px;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+        }
+        footer {
+            background-color: #202223;
+            padding: 10px;
+            text-align: center;
+            color: white;
+            clear: both;
+            margin-top: 2em; 
+        }
+        @media (max-width: 600px) {
+            article {
+                width: 100%;
+                height: auto;
+                margin-left: 0;
+                float: none; 
+            }
+
+        }
+        p {
+            line-height: 1.5;
+            margin-bottom: 1.5em; 
+        }
+        .no-bullets {
+        list-style-type: none; /* Hides bullet points */
+        padding: 0;           /* Removes padding */
+        }
+
+.no-bullets li {
+    margin-bottom: 16px;   /* Adds space between each list item */
+}
+ul {
+    margin-bottom: 0px; 
+}
+li {
+    margin-bottom: 15px; /* Space between list items */
+}
+.no-bullet {
+    list-style-type: none; /* Hides bullet points */
+    padding: 8px;           /* Removes padding */
+    margin: 8px;            /* Removes margin */
+}
+.highlight {
+    background-color: #e3f2fd6d; /* Light blue background */
+    color: #42a4f5e4; /* Blue text color */
+    font-weight: bold; /* Bold text */
+    padding: 2px 4px; /* Add some padding for better visibility */
+    border-radius: 4px; /* Slightly rounded corners */
+}
+
+
+    hr {
+    margin: 84px 0 24px 0; /* Top margin 32px, right margin 0, bottom margin 64px, left margin 0 */
+}
+
+
+.fun-box {
+    background-color: #e3f2fd8d; /* Light blue background */
+    border: 2px dashed #42a4f5e4; /* Dashed border in a darker blue */
+    padding: 15px;
+    margin: 24px 0; /* Space above and below the box */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    cursor: pointer; /* Change cursor to indicate clickable */
+}
+
+.fun-box h5 {
+    margin: 0; /* Remove default margin for the heading */
+}
+
+.dropdown-content {
+    display: none; /* Initially hide the content */
+    padding-top: 10px; /* Space above the content */
+}
+
+.dropdown-content p {
+    margin: 5px 0; /* Space between paragraphs */
+}
+
+.arrow {
+    font-size: 1em; /* Icon size */
+    margin-left: 12px; /* Increase space between title and arrow */
+    transition: transform 0.3s ease; /* Smooth rotation */
+    display: inline-block; /* Ensure proper alignment */
+}
+
+.custom-heading {
+    cursor: pointer; /* Change cursor to pointer for interactivity */
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Center items vertically */
+}
+
+.dropdown-content {
+    display: none; /* Initially hide the content */
+    padding-top: 10px; /* Space above the content */
+}
+
+.fun-box.expanded .dropdown-content {
+    display: block; /* Show content when expanded */
+}
+
+.fun-box.expanded .arrow {
+    transform: rotate(180deg); /* Rotate arrow when expanded */
+}
+
+code {
+    color: #ff7700; /* Change this to your desired color */
+    background-color: #fff8ee; /* Optional: background color */
+    padding: 2px 4px; /* Optional: padding */
+    border-radius: 4px; /* Optional: rounded corners */
+}
+
+section {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+    
+        h2 {
+    color: #ff7700; /* Bright orange */
+    border-bottom: 2px solid #0055FF; /* Blue underline */
+    padding-bottom: 10px;
+    font-family: 'Fira Code', monospace; /* Rounder, modern monospace font */
+    font-size: 24px; /* Adjust size for better readability */
+    letter-spacing: 0.5px; /* Slightly increase space between letters */
+    line-height: 1.4; /* Increase line height for better readability */
+}
+
+
+    
+        li strong {
+            color: #00297b; /* Blue text for emphasis */
+        }
+    
+        p {
+            color: #333; /* Dark text for readability */
+        }
+
+

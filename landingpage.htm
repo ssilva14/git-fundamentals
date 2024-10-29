@@ -7,329 +7,295 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
     <title>Microsite</title>
-    <style>
 
-.navbar {
-    align-items: center;
-    padding-left: 36px; 
-    padding-right: 36px; 
-    padding-top: 8px;  
-    padding-bottom: 8px; 
-}
-
-@media (max-width: 768px) {
-    .navbar-nav {
-        margin-left: 0; 
-    }
-}
-
-.nav-item {
-    margin-right: 20px; /* Spacing between items */
-}
-
-.nav-link {
-    transition: color 0.3s, background-color 0.3s; /* Smooth transition */
-    padding-top: 10px; 
-    padding-bottom: 10px; 
-}
-
-.nav-link:hover {
-    color: var(--hover-color); /* Change color on hover */
-    background-color: rgba(255, 255, 255, 0.1); /* Background change on hover */
-}
-
-.dropdown-menu {
-    transition: opacity 0.3s; /* Smooth dropdown transition */
-}
-
-.dropdown-item:hover {
-    background-color: #ffc107; /* Background change on dropdown hover */
-}
-
-article {
-            padding: 20px;
-            margin-top: 10px; 
-        }
-        section {
-            background: #ffffffb1;
-            padding: 2em;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.231);
-            margin: 2em auto; 
-            max-width: 800px; 
-            width: 100%; 
-        }
-        h4 {
-            font-weight: bold; 
-            color: rgba(0, 108, 154, 0.921);
-            margin-bottom: 1.5em;
-        }
-        .shadow-container {
-            display: flex;
-            flex-direction: column; 
-            align-items: center;
-            margin: 20px;
-            padding: 20px;
-            background-color: #ffffff;
-            border-radius: 8px; 
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
-        }
-        footer {
-            background-color: #202223;
-            padding: 10px;
-            text-align: center;
-            color: white;
-            clear: both;
-            margin-top: 2em; 
-        }
-        @media (max-width: 600px) {
-            article {
-                width: 100%;
-                height: auto;
-                margin-left: 0;
-                float: none; 
-            }
-
-        }
-        p {
-            line-height: 1.5;
-            margin-bottom: 1.5em; 
-        }
-        .no-bullets {
-    list-style-type: none; /* Hides bullet points */
-    padding: 0;           /* Removes padding */
-}
-
-.no-bullets li {
-    margin-bottom: 16px;   /* Adds space between each list item */
-}
-ul {
-    margin-bottom: 24px; 
-}
-.no-bullet {
-    list-style-type: none; /* Hides bullet points */
-    padding: 8px;           /* Removes padding */
-    margin: 8px;            /* Removes margin */
-}
-
-</style>
 <body>
     
 <header>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#get-started">The Git Navigator</a>
+            <a class="navbar-brand" href="#home">The Git Navigator</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
+
                     <li class="nav-item">
-                        <a class="nav-link" href="#get-started" onclick="closeNavbar()">Get Started</a>
+                        <a class="nav-link" href="#home" onclick="closeNavbar()">Home</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#repositories" onclick="closeNavbar()">Repositories</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#next-steps" onclick="closeNavbar()">Next Steps</a>
-                    </li>
+
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownTittle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Tittle
+                            Getting Started
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdownRepos">
-                            <li><a class="dropdown-item" href="#git-branching" onclick="closeNavbar()">Git Branching</a></li>
-                            <li><a class="dropdown-item" href="#remote-repos" onclick="closeNavbar()">Remote Repos</a></li>
-                            <li><a class="dropdown-item" href="#PRs & Reviews." onclick="closeNavbar()">PRs & Reviews</a></li>
+                            <li><a class="dropdown-item" href="#create-github-account" onclick="closeNavbar()">Create GitHub Account</a></li>
+                            <li><a class="dropdown-item" href="#create-a-new-repository" onclick="closeNavbar()">Create a New Repository</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownTittle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Setup
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownRepos">
+                            <li><a class="dropdown-item" href="#install-git" onclick="closeNavbar()">Install Git</a></li>
+                            <li><a class="dropdown-item" href="#install-vscode" onclick="closeNavbar()">Install VS Code</a></li>
+                            <li><a class="dropdown-item" href="#configuring-git-in-vscode" onclick="closeNavbar()">Configuring Git in VS Code</a></li>
+                            <li><a class="dropdown-item" href="#cloning-a-gitHub-repository" onclick="closeNavbar()">Cloning a GitHub Repository</a></li>
+                        </ul>
+                    </li>
+
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownTittle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Using Git and GitHub
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownRepos">
+                            <li><a class="dropdown-item" href="#add-files-and-push-project-to-github" onclick="closeNavbar()">Add Files and Push Project to GitHub</a></li>
+                            <li><a class="dropdown-item" href="#branching-with-vscode" onclick="closeNavbar()">Branching with VS Code</a></li>
+                            <li><a class="dropdown-item" href="#working-with-remote-repositories" onclick="closeNavbar()">Working with Remote Repositories</a></li>
 
                         </ul>
                     </li>
-                        
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownTittle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Collaboration
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownRepos">
+                            <li><a class="dropdown-item" href="#pull-requests-and-code-review" onclick="closeNavbar()">Pull Requests and Code Reviews</a></li>
+                        </ul>
                     </li>
+                        
                 </ul>
             </div>
         </div>
     </nav>
 </header>
 
-<article>
-    <section id="get-started">
-        <h4>Preparing Your Workspace for Coding with Git and Visual Studio Code (VS Code)</h4>
+        <main>
+            <section>
 
+                <h2 id="home">Master Git & GitHub for Effective Project Management</h2>
+                <p><i class="fas fa-book"></i><strong> A Step-by-Step Guide</strong></p>
+                <p>
+                    This comprehensive guide equips you with essential skills for mastering Git and GitHub, key tools for effective project management and version control. Start by creating a GitHub account and setting up your first repository to organize your projects.</p> Next, install Git and Visual Studio Code to streamline file management. Explore the powerful features of remote repositories to push updates and pull changes, keeping your work current. Additionally, learn to create pull requests and engage in collaborative code reviews, enhancing your teamwork capabilities.</p> By the end of this guide, you'll possess valuable skills that are highly sought after in today’s tech industry. Let’s elevate your development skills and get started!</p>
+                    <hr>
+        <h4 id="create-github-account"><strong>1. Create GitHub Account</strong></h4>
         <p>Before you install Git and Visual Studio Code, start by creating a GitHub account:</p>
         <ul>
-            <li>Go to github.com <a href="https:github.com" target="_blank" class="link">github.com</a>and click "Sign up."</li>
+            <li>Go to <a href="https://github.com">github.com</a> and click "Sign up."</li>
             <li>Enter your email, password, and a username.</li>
         </ul>
         
-        <p>How to Install Git:</p>
+        <hr>
+        
+        <h4 id="create-a-new-repository"><strong>2. Create a New Repository</strong></h4>
+        <p>This section will guide you through creating your first repository on your GitHub account:</p>
         <ul>
-            <li>Go to git-scm.com and download Git.</li>
-            <li>Follow the install instructions for your computer.</li>
+            <li><strong>Sign In:</strong> Go to <a href="https://github.com">github.com</a> and log in with your username and password.</li>
+            <li><strong>Go to Your Dashboard:</strong> After signing in, you’ll see your GitHub home page.</li>
+            <li><strong>Start a New Repository:</strong> Click the “New” button or the “Create a new repository” button on the right. You can also click the "+" icon in the top-right corner.</li>
+            <li><strong>Set Up Your Repository:</strong>
+                <ul>
+                    <li><strong>Repository Name:</strong> Type a name for your project.</li>
+                    <li><strong>Visibility:</strong> Choose Public (anyone can see it) or Private (only you and people you invite can see it).</li>
+                </ul>
+            </li>
+            <li><strong>Create the Repository:</strong> Click the “Create repository” button to finish.</li>
         </ul>
         
-        <p>How to Install Visual Studio Code (VS Code):</p>
-        <ul>
-            <li>Visit code.visualstudio.com and download the right version for your device.</li>
-            <li>Install it by following the website's steps.</li>
-        </ul>
-        <h5><span style="color: #3c3f3f;">Configure Git within VS Code</span></h5>
-        <p>Open VS Code</p>
-        <p>Set Up Git Configurations:</p>
-        <ul>
-            <li>Find Terminal by going to View > Terminal</li>
-        </ul>
-        <p>Run these commands:</p>
-        <ul class="no-bullets">
-            <li><code>git config --global user.name "Your Name"</code></li>
-            <li><code>git config --global user.email "your-email@example.com"</code></li>
-            </ul>
+        <hr>
+      
+        <div class="fun-box" onclick="toggleDropdown(this)">
+            <h5 class="custom-heading">
+                What is a Repository? 
+                <span class="arrow"><i class="fas fa-chevron-down"></i></span>
+            </h5>
+            <div class="dropdown-content">
+                <p>A repository is like a digital folder on GitHub where you store everything related to your project. It keeps your code, images, and documents together, making it easy to find what you need.</p>
+            </div>
+        </div>
+             
+        
+        <div class="fun-box" onclick="toggleDropdown(this)">
+            <h5 class="custom-heading">
+                Why Create a Repository? 
+                <span class="arrow"><i class="fas fa-chevron-down"></i></span>
+            </h5>
+            <div class="dropdown-content">
+                <p><strong>Track Changes:</strong> Keep an eye on all updates made to your project, like having an undo feature.</p>
+                <p><strong>Teamwork Collaboration:</strong> Share your code with others, allowing everyone to see additions and edits.</p>
+                <p><strong>Safe Storage:</strong> Store your code online for backup, so you won’t lose anything if your computer crashes.</p>
+                <p><strong>Easy Access:</strong> With a repository, all your project files are in one place, so you can quickly locate and use them while you work.</p>
+                <p><strong>Show Off Your Projects:</strong> Share your work with others by providing a link, showcasing your skills to potential employers. It serves as a portfolio to demonstrate your skills.</p>
+                <p><strong>Integration with VS Code:</strong> Repositories work well with Visual Studio Code (a popular code editor that makes it easy to write and manage code). This integration allows you to sync changes directly to GitHub. Once you finish updating your code in VS Code, you can quickly push those changes to GitHub, keeping your projects organized and up-to-date online.</p>
+            </div>
+        </div>
+            </section>
+        <section>
 
-            <h6>Verify Configuration:</h6>
+            <h2>Setup</h2>
+            
+            <h4 id="install-git"><strong>3. How to Install Git:</strong></h4>
+            <ul>
+                <li>Go to git-scm.com and download Git.</li>
+                <li>Follow the install instructions for your computer.</li>
+            </ul>
+        
+            <h4 id="install-vscode"><strong>4. How to Install Visual Studio Code (VS Code):</strong></h4>
+            <ul>
+                <li>Visit code.visualstudio.com and download the right version for your device.</li>
+                <li>Install it by following the website's steps.</li>
+            </ul>
+        <hr>
+            
+            <h4 id="installing-git-on-macos"><strong>5. Installing Git on macOS</strong></h5>
+            <ul>
+                <li><strong>Open Terminal:</strong> Go to <strong>View > Terminal</strong>.</li>
+                
+                <li><strong>Install Xcode Command Line Tools:</strong>
+                    <ul>
+                        <li>Run this command in Terminal:</li>
+                        <li class="no-bullet"><code>xcode-select --install</code></li>
+                    </ul>
+                </li>
+                
+                <li><strong>Follow the Prompts:</strong> A window will pop up asking if you want to install. Click “Install” to download Git.</li>
+                
+                <li><strong>Set VS Code as the Default Editor for Git:</strong>
+                    <ul>
+                        <li>After Git is installed, open VS Code.</li>
+                        <li>Go to the terminal (View > Terminal) and run:</li>
+                        <li class="no-bullet"><code>git config --global core.editor "code --wait"</code></li>
+                        <li>This tells Git to use VS Code for editing.</li>
+                    </ul>
+                </li>
+            </ul>
+            <hr>
+            <h4 id=configuring-git-in-vscode><strong>6. Configuring Git in VS Code</strong></h4>
+            <p>Open VS Code.</p>
+            <p><strong>Set Up Git Configurations:</strong></p>
+            <ul>
+                <li>Find Terminal by going to View > Terminal.</li>
+            </ul>
+            <p>Run these commands:</p>
+            <ul class="no-bullets">
+                <li><code>git config --global user.name "Your Name"</code></li>
+                <li><code>git config --global user.email "your-email@example.com"</code></li>
+            </ul>
+        
+            <h6><strong>Verifying Your Configuration:</strong></h6>
             <p>Check your settings by running:</p>
             <ul class="no-bullets">
                 <li><code>git config --list</code></li>
-                </ul>
+            </ul>
             <p>Make sure your username and email are correct.</p>
-
-
-
-
-    </section>
-    
-    <section id="repositories">
-        <h4>Creating and Cloning a GitHub Repository</h4> 
-            <ol>
-                <li><strong>Sign In:</strong> Go to <a href="https://github.com">github.com</a> and log in with your username and password.</li>
-                <li><strong>Go to Your Dashboard:</strong> After signing in, you’ll see your GitHub home page.</li>
-                <li><strong>Start a New Repository:</strong> Click the “New” button or the “Create a new repository” button on the right. You can also click the "+" icon in the top-right corner.</li>
-                <li><strong>Set Up Your Repository:</strong>
-                    <ul>
-                        <li><strong>Repository Name:</strong> Type a name for your project.</li>
-                        <li><strong>Visibility:</strong> Choose Public (anyone can see it) or Private (only you and people you invite can see it).</li>
-                    </ul>
+<hr>
+            <h4 id="cloning-a-gitHub-repository"><strong>7. Cloning a GitHub Repository</strong></h4>
+            
+            <ul>
+                <li><strong>Open Visual Studio Code:</strong></li>
+                <li>
+                    <strong>Open the Command Palette:</strong> Go to View > Command Palette or press <span class="highlight">Cmd + Shift + P</span>.
                 </li>
-                <li><strong>Create the Repository:</strong> Click the “Create repository” button to finish.</li>
-            </ol>
-                       
-        <h5>Install Git on macOS</h5>
+                <li>
+                    <strong>Select Git: Clone:</strong> Type and select <span class="highlight">Git: Clone</span>.
+                </li>
+                <li><strong>Paste the Repository URL:</strong> Paste the URL of the repository you want to clone (you can find this on GitHub).</li>
+                <li><strong>Select a Folder:</strong> Choose a folder on your computer to save it and click <strong>Select Folder</strong>.</li>
+            </ul>
+            
+            <p><strong>After Cloning:</strong> VS Code will create a new folder with the project files. You can open this folder to start working on your project!</p>
+            
+        <hr>
+        <h4 id="add-files-and-push-project-to-github"><strong>8. Add Files and Push Project to GitHub</strong></h4>
 
-        <ol>
-            <li><strong>Open Terminal:</strong> Go to <strong>View > Terminal</strong>.</li>
-            
-            <li><strong>Install Xcode Command Line Tools:</strong>
-                <ul>
-                    <li>Run this command in Terminal:</li>
-                    <li class="no-bullet"><code>xcode-select --install</code></li>
-                </ul>
-            </li>
-            
-            <li><strong>Follow the Prompts:</strong> A window will pop up asking if you want to install. Click “Install” to download Git.</li>
-            
-            <li><strong>Set Visual Studio Code as the Default Editor for Git:</strong>
-                <ul>
-                    <li>After Git is installed, open VS Code.</li>
-                    <li>Go to the terminal (View > Terminal) and run:</li>
-                    <li class="no-bullet"><code>git config --global core.editor "code --wait"</code></li>
-                    <li>This tells Git to use VS Code for editing.</li>
-                </ul>
-            </li>
-            
-            <li><strong>Clone the Repository Using VS Code:</strong>
-                <ul>
-                    <li>Open Visual Studio Code.</li>
-                    <li>Open the Command Palette (go to View > Command Palette or press Cmd + Shift + P).</li>
-                    <li>Type and select <strong>Git: Clone</strong>.</li>
-                    <li>Paste the URL of the repository you want to clone (you can find this on GitHub).</li>
-                    <li>Choose a folder on your computer to save it and click <strong>Select Folder</strong>.</li>
-                </ul>
-            </li>
-            
-            <li><strong>After Cloning:</strong> VS Code will create a new folder with the project files. You can open this folder to start editing!</li>
-        </ol>
+        <ul>
+            <li><strong>Open Your Project:</strong> Ensure your cloned repository is open in VS Code.</li>
         
-    </section>
-
-
-    <section id="next-steps">
-        <h4>C. Next Steps</h4>
-
-<ol>
-    <li><strong>Open Your Project:</strong> Make sure your cloned repository is open in VS Code.</li>
-
-    <li><strong>Add Your Project Files (Optional):</strong>
-        <ul>
-            <li>You can create new folders and files right inside the cloned folder, or you can put your existing HTML and CSS files into it.</li>
-        </ul>
-    </li>
-
-    <li><strong>Initialize Git (if needed):</strong>
-        <ul>
-            <li>If your repository is already cloned, you don’t need to run <code>git init</code> again—it’s already a Git repository.</li>
-            <li>If you do need to set it up, open the terminal in VS Code (go to <strong>Terminal > New Terminal</strong>) and type:</li>
-            <li class="no-bullet"><code>git init</code></li>
-        </ul>
-    </li>
-
-    <li><strong>Commit Your Changes:</strong>
-        <ul>
-            <li>In the terminal, type:</li>
-            <li class="no-bullet"><code>git add .</code></li>
-            <li>Then type:</li>
-            <li class="no-bullet"><code>git commit -m "Initial commit"</code></li>
-        </ul>
-    </li>
-
-    <li><strong>Push the Project to GitHub:</strong>
-        <ul>
-            <li>To upload your files to GitHub, type:</li>
-            <li class="no-bullet"><code>git push origin master</code></li>
-        </ul>
-            <p>(If you’re using a branch name like "main," replace <code>master</code> with your branch name.)</p>
+            <li><strong>Add Your Project Files:</strong>
+                <ul>
+                    <li>Copy your HTML and CSS files into the cloned folder. Having these files open in VS Code ensures they are ready to be pushed to GitHub.</li>
+                </ul>
+            </li>
         
-    </li>
-</ol>
+            <li><strong>Initialize Git (if needed):</strong>
+                <ul>
+                    <li>If your repository is already cloned, you don’t need to run <code>git init</code> again—it’s already a Git repository.</li>
+                    <li>If you do need to set it up, open the terminal in VS Code (go to <strong>Terminal > New Terminal</strong>) and type:</li>
+                    <li class="no-bullet"><code>git init</code></li>
+                </ul>
+            </li>
+        
+            <li><strong>Commit Your Changes:</strong>
+                <ul>
+                    <li>In the terminal, type:</li>
+                    <li class="no-bullet"><code>git add .</code></li>
+                </ul>
+                <p>The <code>.</code> tells Git to track all files (or add files) in the current directory, ensuring it remembers any changes you make.</p>
+                <ul>
+                    <li>Then type:</li>
+                    <li class="no-bullet"><code>git commit -m "Initial commit"</code></li>
+                </ul>
+                <p>This command saves your changes in Git and adds a message ("Initial commit") to describe what you’ve done.</p>
+            </li>
+        
+            <li><strong>Push the Project to GitHub:</strong>
+                <ul>
+                    <li>To upload your files to GitHub, type:</li>
+                    <li class="no-bullet"><code>git push origin main</code></li>
+                </ul>
+                <p>(If you’re using a branch name like "master," replace <code>main</code> with your branch name.)</p>
+            </li>
+        </ul>
 
-    </section>
+   </section>
 
-    <section id="git-branching">
-        <h4>Branching with VS Code</h4>
+    <section>
+        <h2 id="branching-with-vscode">Branching with VS Code</h2>
 
-<ol>
-    <li><strong>What are Branches?</strong> 
+        <ul class="no-bullets">
+        <li><h4><strong>What are Branches?</strong></h4>
         <p>Branches let you work on different features or fix bugs without messing up the main project. Use <code>git status</code> to see which branch you’re on.</p>
-    </li>
+        </li>
 
-    <li><strong>Creating a Branch:</strong>
+        <li><strong>Creating a Branch:</strong>
         <p>To create a new branch (but not switch to it), type:</p>
         <p class="no-bullet"><code>git branch [branch-name]</code></p>
-    </li>
+        </li>
 
-    <li><strong>Switching Branches:</strong>
+        <li><strong>Switching Branches:</strong>
         <p>To switch to a branch and create it if it doesn’t exist, type:</p>
         <p class="no-bullet"><code>git switch -c [branch-name]</code></p>
-    </li>
+        </li>
 
-    <li><strong>Merging Branches:</strong>
+        <li><strong>Merging Branches:</strong>
         <p>To combine changes from one branch into your current branch, type:</p>
         <p class="no-bullet"><code>git merge [branch]</code></p>
         <p>This is often done during pull requests.</p>
-    </li>
+        </li>
 
-    <li><strong>Deleting a Branch:</strong>
+        <li><strong>Deleting a Branch:</strong>
         <p>To remove a branch that has been merged, type:</p>
         <p class="no-bullet"><code>git branch -d [branch-name]</code></p>
-    </li>
-</ol>
+        </li>
+        </ul>
 
-<p><strong>Tips:</strong> Use clear names for branches, and make sure they focus on one task to keep things organized.</p>
+        <p><strong>Tips:</strong> Use clear names for branches, and make sure they focus on one task to keep things organized.</p>
             
     </section>
 
-    <section id="remote-repos">
-        <h4>Working with Remote Repositories</h4>
-        <ol>
+    <section>
+        <h2 id="working-with-remote-repositories">Working with Remote Repositories</h2>
+        <ul>
             <li><strong>Adding a Remote Repository:</strong>
                 <ul>
                     <li>Open your project in VS Code.</li>
@@ -351,46 +317,43 @@ ul {
                 <p class="no-bullet"><code>git pull origin main</code></p>
                 <p>(Again, replace <code>main</code> with your branch name if needed.)</p>
             </li>
-        </ol>
-        
+        </ul>  
 
     </section>
 
-    <section id="PRs & Reviews.">
-        <h4>Pull Requests and Code Reviews</h4>
-
-        <ol>
+ 
+    
+    <section>
+        <h2 id="pull-requests-and-code-review">Pull Requests and Code Reviews</h2>
+    
+        <ul>
             <li><strong>Creating a Pull Request:</strong>
+                <p>Once you've pushed your changes, navigate to your GitHub repository in your web browser.</p>
                 <ul>
-                    <li>After you push your changes, go to your GitHub repository in your web browser.</li>
                     <li>Click the button to create a pull request for your new branch.</li>
-                    <li>Add a title and a short description, then click "Create Pull Request."</li>
+                    <li>Add a concise title and a brief description, then click "Create Pull Request."</li>
                 </ul>
             </li>
-        
+            
             <li><strong>Reviewing Pull Requests:</strong>
+                <p>Access the "Pull Requests" tab in your GitHub repository.</p>
                 <ul>
-                    <li>Go to the "Pull Requests" tab in your GitHub repository.</li>
-                    <li>Click on the pull request you want to review.</li>
-                    <li>You can see the changes, leave comments, and talk with your team.</li>
-                    <li>If it looks good, you can approve it or ask for changes if needed.</li>
+                    <li>Select the pull request you wish to review.</li>
+                    <li>Examine the changes, leave comments, and engage with your team.</li>
+                    <li>If everything looks good, approve the request or suggest changes as necessary.</li>
                 </ul>
             </li>
-        </ol>
-        
-        
+        </ul>
     </section>
+    
 
+</section>
+    
+</main>
 
-    </article>
-
-
-
-
-
-
-
-
+<footer>
+    <p>&copy; 2024 The Git Navigator. Sofia Silva</p>
+</footer>
 </body>
 
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
@@ -412,4 +375,14 @@ ul {
             event.stopPropagation();
         });
     });
+
+
+    function toggleDropdown(box) {
+    const dropdown = box.querySelector('.dropdown-content');
+    dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+    box.classList.toggle('expanded');
+}
+
+
+   
 </script>
